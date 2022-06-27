@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
 
-from primerasvistas.models import Perro
+from primerasvistas.models import Familia
 
 
 
@@ -54,12 +54,17 @@ def mi_template(request):
     lista = ["Katia", "Maximo Decimo", "Esme", "Memo", "Memito", "Brisa", "Nemo"]
     
     
-    perro = Perro(nombre="Fernando", edad=31) 
-    perro2 = Perro(nombre="David", edad=31) 
-    perro3 = Perro(nombre="Fercho", edad=31) 
+    familia = Familia(nombre="Fernando", edad=31) 
+    familia2 = Familia(nombre="David", edad=31) 
+    familia3 = Familia(nombre="Fercho", edad=31) 
+    
+  
+    
+    
+    
     
     render1 = template1.render(
-        {"nombre" : nombre, "apellido" : apellido, "edad" : 6000, "lista": lista , "perro": perro 
-         , "perro2": perro2, "perro3": perro3})
+        {"nombre" : nombre, "apellido" : apellido, "edad" : 6000, "lista": lista , "familia": familia 
+         , "familia2": familia2, "familia3": familia3})
     
     return HttpResponse(render1)
