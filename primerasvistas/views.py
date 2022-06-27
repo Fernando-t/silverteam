@@ -58,6 +58,7 @@ def mi_template(request):
     familia2 = Familia(nombre="David", edad=31) 
     familia3 = Familia(nombre="Fercho", edad=31) 
     
+    familia.save()
   
     
     
